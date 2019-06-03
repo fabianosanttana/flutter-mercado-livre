@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' show Client;
+import 'package:mercado_livre/resources/models/product_detail_model.dart';
 import '../models/product_model.dart';
 
 class ApiProvider {
@@ -12,18 +13,18 @@ class ApiProvider {
     if (response.statusCode == 200) {
       return (json.decode(response.body) as List).map((data) => new Product.fromJson(data)).toList();
     } else {
-      throw Exception('Failed to load post');
+      throw Exception('Failed to load products');
     }
   }
 
-  // Future<TrailerModel> fetchTrailer(int movieId) async {
-  //   final response =
-  //       await client.get("$_baseUrl/$movieId/videos?api_key=$_apiKey");
+  Future<ProductDetail> fetchProduct(int productID) async {
+    final response =
+        await client.get("$_baseUrl/products/$productID");
 
-  //   if (response.statusCode == 200) {
-  //     return TrailerModel.fromJson(json.decode(response.body));
-  //   } else {
-  //     throw Exception('Failed to load trailers');
-  //   }
-  // }
+    if (response.statusCode == 200) {
+      return ProductDetail.fromJson(json.decode(response.body));
+    } else {
+      throw Exception('Failed to load product');
+    }
+  }
 }

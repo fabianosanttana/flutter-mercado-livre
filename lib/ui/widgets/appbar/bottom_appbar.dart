@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mercado_livre/theme/custom_icons.dart';
 
 class CustomAppBarBottom extends PreferredSize {
   CustomAppBarBottom({Key key, Size size})

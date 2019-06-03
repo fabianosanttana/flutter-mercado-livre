@@ -1,4 +1,5 @@
 enum EnumAppBar { 
    main, 
-   cart
+   cart,
+   product
 }  

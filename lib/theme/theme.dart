@@ -9,8 +9,7 @@ class CustomThemes {
       brightness: Brightness.light,
       primaryColor: Colors.lightBlue[800],
       accentColor: CustomColors.mainYellow,
-      backgroundColor: CustomColors.backgroundColor,
-
+      
       //Definindo o tema padrão da nossa appBar
       appBarTheme: AppBarTheme(
           color: CustomColors.mainYellow,
@@ -23,6 +22,9 @@ class CustomThemes {
           iconTheme:
               IconThemeData(color: CustomColors.textYellow, opacity: 0.8),
           elevation: 0.5),
+
+      //Definindo a cor de fundo do nosso scaffold
+      scaffoldBackgroundColor: CustomColors.backgroundColor,
 
       // Define o tema padrão para card
       cardTheme: CardTheme(

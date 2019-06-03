@@ -13,6 +13,8 @@ class CustomActions {
         return mainActions;
       case EnumAppBar.cart:
         return cartActions;
+      case EnumAppBar.product:
+        return productActions;
       default:
         return mainActions;
     }
@@ -36,5 +38,21 @@ class CustomActions {
       icon: Icon(Icons.search),
       onPressed: () {},
     ),
+  ];
+
+  static List<Widget> productActions = [
+    IconButton(
+      icon: Icon(Icons.favorite_border),
+      onPressed: () {},
+    ),
+    IconButton(
+      icon: Icon(Icons.search),
+      onPressed: () {},
+    ),
+    IconButton(
+        icon: Icon(CustomIcons.cart),
+        onPressed: () {
+          CustomNavigation.pushNavigation(_context, '/cart');
+        }),
   ];
 }

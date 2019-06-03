@@ -6,7 +6,6 @@ import 'package:mercado_livre/ui/widgets/carousel/carousel_spotlight.dart';
 
 //Custom Widgets
 import 'package:mercado_livre/ui/widgets/horizontal_list/horizontal_list.dart';
-import 'package:mercado_livre/ui/widgets/layout_builder/layout_builder.dart';
 import 'package:mercado_livre/ui/widgets/product/products_grid.dart';
 
 class MainContainer extends StatefulWidget {
@@ -29,9 +28,6 @@ class _MainContainerState extends State<MainContainer> {
           child: Column(children: <Widget>[
         CarouselSpotlight(),
         HorizontalList(),
-        SizedBox(
-          height: 20.0,
-        ),
         Container(
           child: ProductsGrid(),
         ),

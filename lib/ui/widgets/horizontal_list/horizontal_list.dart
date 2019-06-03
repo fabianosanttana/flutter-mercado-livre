@@ -3,7 +3,7 @@ import 'package:mercado_livre/theme/custom_icons.dart';
 import 'package:mercado_livre/ui/widgets/horizontal_list/horizontal_circle_item.dart';
 
 class HorizontalList extends StatelessWidget {
-  final List<HorizontalCircleItem> list = [
+  final List<HorizontalCircleItem> _list = [
     HorizontalCircleItem(
         title: 'Pagar com código QR',
         icon: CustomIcons.blackberry_qr_code_variant,
@@ -73,13 +73,13 @@ class HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 5.0),
+      margin: EdgeInsets.symmetric(vertical: 10.0),
       height: 145.0,
       padding: EdgeInsets.symmetric(horizontal: 10.0),
       child: ListView.builder(
-        itemCount: list.length,
+        itemCount: _list.length,
         itemBuilder: (context, i) {
-          return list[i];
+          return _list[i];
         },
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,

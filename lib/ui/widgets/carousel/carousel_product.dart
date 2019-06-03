@@ -1,12 +1,12 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class CarouselSpotlight extends StatefulWidget {
+class CarouselProductDetail extends StatefulWidget {
   @override
-  _CarouselSpotlightState createState() => _CarouselSpotlightState();
+  _CarouselProductDetailState createState() => _CarouselProductDetailState();
 }
 
-class _CarouselSpotlightState extends State<CarouselSpotlight> {
+class _CarouselProductDetailState extends State<CarouselProductDetail> {
   @override
   Widget build(BuildContext context) {
     return Container(

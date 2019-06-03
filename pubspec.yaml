@@ -50,6 +50,8 @@ flutter:
     - assets/images/banner_2.jpg
     - assets/images/banner_3.jpg
     - assets/images/banner_4.jpg
+    - assets/images/placeholder-portrait.png
+    - assets/images/product.gif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

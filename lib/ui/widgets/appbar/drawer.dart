@@ -11,22 +11,64 @@ class _CustomDrawerState extends State<CustomDrawer> {
   Widget build(BuildContext context) {
     return Drawer(
         child: new ListView(
-        children: <Widget>[
+      children: <Widget>[
         //header - Mockado
-        new UserAccountsDrawerHeader(
-          accountName: Text('Fabiano Santana'),
-          accountEmail: Text('fabianosanttana@hotmail.com'),
-          currentAccountPicture: GestureDetector(
-            child: new CircleAvatar(
-              backgroundColor: CustomColors.mainYellow,
-              child: Icon(
-                Icons.person,
-                color: Colors.white,
+        Container(
+          height: 100,
+          padding: EdgeInsets.all(10),
+          color: CustomColors.mainYellow,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Flexible(
+                flex: 3,
+                child: CircleAvatar(
+                  backgroundColor: CustomColors.backgroundColor,
+                  child: Icon(
+                    Icons.person,
+                    color: CustomColors.grayTitle[100],
+                  ),
+                ),
               ),
-            ),
+              Spacer(
+                flex: 1,
+              ),
+              Flexible(
+                flex: 10,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Fabiano Santana',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                    Text('fabianosanttana@hotmail.com',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, color: Colors.white))
+                  ],
+                ),
+              )
+            ],
           ),
-          decoration: new BoxDecoration(color: CustomColors.mainYellow),
         ),
+        // new UserAccountsDrawerHeader(
+        //   accountName: Text('Fabiano Santana'),
+        //   accountEmail: Text('fabianosanttana@hotmail.com'),
+        //   currentAccountPicture: GestureDetector(
+        //     child: new CircleAvatar(
+        //       backgroundColor: CustomColors.mainYellow,
+        //       child: Icon(
+        //         Icons.person,
+        //         color: Colors.white,
+        //       ),
+        //     ),
+        //   ),
+        //   decoration: new BoxDecoration(color: CustomColors.mainYellow),
+        // ),
 
         //body
         InkWell(

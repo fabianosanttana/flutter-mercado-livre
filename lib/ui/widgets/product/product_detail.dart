@@ -31,7 +31,7 @@ class ProductDetailLayout extends StatelessWidget {
                 style: CustomThemes.productDetailTitle,
               ),
               Text(
-                'por MERCADO LIVRE',
+                'por FABIANO SANTANA',
                 style: TextStyle(
                     fontSize: 12,
                     color: CustomColors.grayTitle[50],
@@ -61,6 +61,92 @@ class ProductDetailLayout extends StatelessWidget {
                 ],
               ),
             ],
+          ),
+        ),
+        ListTile(
+          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          title: Text(
+            '12x R\$ 21.46 sem juros',
+            style: CustomThemes.priceDescount.copyWith(fontSize: 16),
+          ),
+          subtitle: Text(
+            'Com seu cartão final 0099',
+            style: CustomThemes.titleProduct.copyWith(fontSize: 16),
+          ),
+          leading: CircleAvatar(
+            child: Icon(
+              Icons.credit_card,
+              color: CustomColors.greenDiscount,
+              size: 20,
+            ),
+            backgroundColor: Colors.white,
+          ),
+          trailing: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: CustomColors.grayTitle[50],
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Divider(color: CustomColors.grayTitle[50], height: 1),
+        ),
+        ListTile(
+          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          title: Text(
+            'Frete grátis',
+            style: CustomThemes.priceDescount.copyWith(fontSize: 16),
+          ),
+          subtitle: Text(
+            'Chegará entre os dias 6 a 10 de bla bla\nBenefício Mercado Pontos',
+            style: CustomThemes.titleProduct.copyWith(fontSize: 16),
+          ),
+          leading: CircleAvatar(
+            child: Icon(
+              Icons.directions_car,
+              color: CustomColors.greenDiscount,
+              size: 20,
+            ),
+            backgroundColor: Colors.white,
+          ),
+          trailing: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: CustomColors.grayTitle[50],
+            ),
+            onPressed: () {},
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Divider(color: CustomColors.grayTitle[50], height: 1),
+        ),
+        ListTile(
+          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          title: Text(
+            'Devolução agilizada',
+            style: CustomThemes.priceDescount.copyWith(fontSize: 16),
+          ),
+          subtitle: Text(
+            'Se você não gostar, só devolver\n:)',
+            style: CustomThemes.titleProduct.copyWith(fontSize: 16),
+          ),
+          leading: CircleAvatar(
+            child: Icon(
+              Icons.subdirectory_arrow_left,
+              color: CustomColors.greenDiscount,
+              size: 20,
+            ),
+            backgroundColor: Colors.white,
+          ),
+          trailing: IconButton(
+            icon: Icon(
+              Icons.arrow_forward_ios,
+              color: CustomColors.grayTitle[50],
+            ),
+            onPressed: () {},
           ),
         ),
       ],

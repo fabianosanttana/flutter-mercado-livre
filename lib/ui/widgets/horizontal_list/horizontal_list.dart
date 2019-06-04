@@ -18,19 +18,19 @@ class HorizontalList extends StatelessWidget {
     ),
     HorizontalCircleItem(
       title: 'Ofertas da semana',
-      icon: CustomIcons.tag__2_,
+      icon: CustomIcons.car,
     ),
     HorizontalCircleItem(
       title: 'Acessórios para Veículos',
-      icon: CustomIcons.shopping_online,
+      icon: CustomIcons.car,
     ),
     HorizontalCircleItem(
       title: 'Brinquedos e Hobbies',
-      icon: CustomIcons.shopping_online,
+      icon: CustomIcons.car,
     ),
     HorizontalCircleItem(
       title: 'Calçados, Roupas, e Bolsas',
-      icon: CustomIcons.shopping_online,
+      icon: CustomIcons.car,
     ),
     HorizontalCircleItem(
       title: 'Carros, Motos e Outros',
@@ -54,7 +54,7 @@ class HorizontalList extends StatelessWidget {
     ),
     HorizontalCircleItem(
       title: 'Imóveis',
-      icon: Icons.home,
+      icon: Icons.filter_hdr,
     ),
     HorizontalCircleItem(
       title: 'Informática',
@@ -62,7 +62,7 @@ class HorizontalList extends StatelessWidget {
     ),
     HorizontalCircleItem(
       title: 'Lojas oficiais',
-      icon: CustomIcons.cart,
+      icon: Icons.accessibility,
     ),
     HorizontalCircleItem(
       title: 'Ver todas',
@@ -73,7 +73,7 @@ class HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10.0),
+      margin: EdgeInsets.only(top: 20),
       height: 145.0,
       padding: EdgeInsets.symmetric(horizontal: 10.0),
       child: ListView.builder(

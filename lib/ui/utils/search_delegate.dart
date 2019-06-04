@@ -1,7 +1,4 @@
-// Defines the content of the search page in `showSearch()`.
-// SearchDelegate has a member `query` which is the query string.
 import 'package:flutter/material.dart';
-import 'package:mercado_livre/theme/colors.dart';
 import 'package:mercado_livre/ui/widgets/appbar/suggest_list.dart';
 
 class MySearchDelegate extends SearchDelegate<String> {

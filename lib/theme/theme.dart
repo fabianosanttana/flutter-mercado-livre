@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import './colors.dart';
 
 class CustomThemes {
-  static final String title = 'Mercado Livre';
+  static final String title = 'Mercado Livre - Flutter';
 
   static final ThemeData kDefaultTheme = ThemeData(
       // Define o brilho padrão e nosso esquema de cores
       brightness: Brightness.light,
       primaryColor: Colors.lightBlue[800],
       accentColor: CustomColors.mainYellow,
-      
-      //Definindo o tema padrão da nossa appBar
+
+      // Definindo o tema padrão da nossa appBar
       appBarTheme: AppBarTheme(
           color: CustomColors.mainYellow,
           textTheme: TextTheme(
@@ -36,10 +36,10 @@ class CustomThemes {
           )),
 
       // Define a fonte padrão do nosso aplicativo
-      fontFamily: 'Proxima Nova',
+      fontFamily: 'Zeitung Pro',
       textTheme: TextTheme(
           headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          title: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          title: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w900 , fontFamily: 'Proxima Nova'),
           caption: TextStyle(
               fontSize: 14.0,
               fontWeight: FontWeight.w700,
@@ -48,14 +48,22 @@ class CustomThemes {
   // Definindo próprio tema para texto
   static final TextStyle price = TextStyle(
       fontSize: 17,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w900,
+      color: CustomColors.textYellow);
+  static final TextStyle productDetailTitle = TextStyle(
+      fontSize: 28,
+      fontWeight: FontWeight.w900,
       color: CustomColors.textYellow);
   static final TextStyle priceDescount = TextStyle(
       fontSize: 12.0,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w900,
       color: CustomColors.greenDiscount);
   static final TextStyle titleProduct = TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w700, color: CustomColors.grayTitle[50]);
+      fontSize: 14,
+      fontWeight: FontWeight.w900,
+      color: CustomColors.grayTitle[50]);
   static final TextStyle titleCircleItem = TextStyle(
-      fontSize: 12, fontWeight: FontWeight.w900, color: CustomColors.grayTitle[100]);
+      fontSize: 12,
+      fontWeight: FontWeight.w900,
+      color: CustomColors.grayTitle[100]);
 }

@@ -37,6 +37,7 @@ class _AppBarBottom extends State<AppBarBottom> {
               Expanded(
                   child: Text(
                     'Enviar para Fabiano - Beco Diagonal - Londres ...',
+                    overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.caption,
                   ),
                   flex: 5),

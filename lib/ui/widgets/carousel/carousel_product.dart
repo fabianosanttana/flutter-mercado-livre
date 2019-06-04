@@ -1,31 +1,40 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 
-class CarouselProductDetail extends StatefulWidget {
-  @override
-  _CarouselProductDetailState createState() => _CarouselProductDetailState();
-}
-
-class _CarouselProductDetailState extends State<CarouselProductDetail> {
+class CarouselProductDetail extends StatelessWidget {
+  final List<dynamic> images;
+  CarouselProductDetail(this.images);
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 260.0,
-      child: new Carousel(
-        boxFit: BoxFit.fitHeight,
-        images: [
-          AssetImage('assets/images/banner_1.jpg'),
-          AssetImage('assets/images/banner_2.jpg'),
-          AssetImage('assets/images/banner_3.jpg'),
-          AssetImage('assets/images/banner_4.jpg'),
-        ],
-        autoplay: false,
-        dotSize: 4.5,
-        dotSpacing: 10,
-        dotColor: Colors.white70,
-        dotBgColor: Colors.transparent,
-        indicatorBgPadding: 10.0,
-      ),
+      child: Stack(children: [
+        Carousel(
+          boxFit: BoxFit.fill,
+          images: images.map((f) => NetworkImage(f)).toList(),
+          autoplay: false,
+          showIndicator: false,
+        ),
+        Positioned(
+          height: 20,
+          width: 50,
+          bottom: 15,
+          left: 15,
+          child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.black26,
+                  borderRadius: BorderRadius.all(Radius.circular(4.0))),
+              alignment: Alignment.center,
+              child: Text(
+                '${images.length} Fotos',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13,
+                    color: Colors.white),
+                textAlign: TextAlign.center,
+              )),
+        ),
+      ]),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mercado_livre/config/appbar.dart';
 import 'package:mercado_livre/ui/widgets/appbar/app_bar.dart';
 import 'package:mercado_livre/ui/widgets/appbar/drawer.dart';
+import 'package:mercado_livre/ui/widgets/breaking_container/breaking_container.dart';
 import 'package:mercado_livre/ui/widgets/carousel/carousel_spotlight.dart';
 
 //Custom Widgets
@@ -28,6 +29,10 @@ class _MainContainerState extends State<MainContainer> {
           child: Column(children: <Widget>[
         CarouselSpotlight(),
         HorizontalList(),
+        Container(
+          child: ProductsGrid(),
+        ),
+        BreakingContainer(),
         Container(
           child: ProductsGrid(),
         ),

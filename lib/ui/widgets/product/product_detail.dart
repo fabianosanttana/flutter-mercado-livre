@@ -205,7 +205,7 @@ class ProductDetailLayout extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
           child: OutlineButton(
             shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.circular(5.0)),
@@ -218,7 +218,8 @@ class ProductDetailLayout extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 80
+          height: 80,
+          child: Container(),
         ),
       ],
     );

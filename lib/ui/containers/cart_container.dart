@@ -30,14 +30,14 @@ class _CartContainerState extends State<CartContainer> {
                       image: AssetImage('assets/images/empty-cart.png')),
                   color: CustomColors.mainYellow),
             ),
-            SizedBox(height: 100),
+            SizedBox(height: 80),
             Text(
               'Seu carrinho está vazio',
               style: TextStyle(
                   fontFamily: 'Proxima Nova',
                   fontSize: 22,
                   color: CustomColors.textYellow,
-                  fontWeight: FontWeight.w300),
+                  fontWeight: FontWeight.w900),
             ),
             SizedBox(height: 10),
             Text(

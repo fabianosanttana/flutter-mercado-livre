@@ -15,7 +15,7 @@ class ProductDetailLayout extends StatelessWidget {
       children: <Widget>[
         CarouselProductDetail(productDetail.images),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -64,7 +64,7 @@ class ProductDetailLayout extends StatelessWidget {
           ),
         ),
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
           title: Text(
             '12x R\$ 21.46 sem juros',
             style: CustomThemes.priceDescount.copyWith(fontSize: 16),
@@ -84,7 +84,8 @@ class ProductDetailLayout extends StatelessWidget {
           trailing: IconButton(
             icon: Icon(
               Icons.arrow_forward_ios,
-              color: CustomColors.grayTitle[50],
+              color: Colors.black38,
+              size: 14,
             ),
             onPressed: () {},
           ),
@@ -94,7 +95,7 @@ class ProductDetailLayout extends StatelessWidget {
           child: Divider(color: CustomColors.grayTitle[50], height: 1),
         ),
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
           title: Text(
             'Frete grátis',
             style: CustomThemes.priceDescount.copyWith(fontSize: 16),
@@ -114,7 +115,8 @@ class ProductDetailLayout extends StatelessWidget {
           trailing: IconButton(
             icon: Icon(
               Icons.arrow_forward_ios,
-              color: CustomColors.grayTitle[50],
+              color: Colors.black38,
+              size: 14,
             ),
             onPressed: () {},
           ),
@@ -124,7 +126,7 @@ class ProductDetailLayout extends StatelessWidget {
           child: Divider(color: CustomColors.grayTitle[50], height: 1),
         ),
         ListTile(
-          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+          contentPadding: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
           title: Text(
             'Devolução agilizada',
             style: CustomThemes.priceDescount.copyWith(fontSize: 16),
@@ -141,14 +143,80 @@ class ProductDetailLayout extends StatelessWidget {
             ),
             backgroundColor: Colors.white,
           ),
-          trailing: IconButton(
-            icon: Icon(
-              Icons.arrow_forward_ios,
-              color: CustomColors.grayTitle[50],
-            ),
-            onPressed: () {},
+        ),
+        Container(
+          height: 50,
+          padding: EdgeInsets.only(left: 10),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4),
+            color: Colors.white,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Flexible(
+                flex: 11,
+                child: RichText(
+                  text: TextSpan(
+                    text: 'Quantidade: ',
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: CustomColors.grayTitle[100],
+                        fontFamily: 'Zeitung Pro',
+                        fontWeight: FontWeight.w900),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: '12',
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontFamily: 'Zeitung Pro',
+                              color: CustomColors.grayTitle[50],
+                              fontWeight: FontWeight.w900))
+                    ],
+                  ),
+                ),
+              ),
+              Flexible(
+                flex: 1,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.black38,
+                    size: 14,
+                  ),
+                  onPressed: () {},
+                ),
+              )
+            ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+          child: FlatButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(5.0)),
+            padding: EdgeInsets.all(12),
+            onPressed: () {},
+            color: Colors.blue,
+            child: Text('Comprar',
+                style: CustomThemes.productDetailTitle
+                    .copyWith(color: Colors.white, fontSize: 18)),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: OutlineButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(5.0)),
+            padding: EdgeInsets.all(12),
+            onPressed: () {},
+            borderSide: BorderSide(color: Colors.blue),
+            child: Text('Adicionar ao carrinho',
+                style: CustomThemes.productDetailTitle
+                    .copyWith(color: Colors.blue, fontSize: 18)),
+          ),
+        )
       ],
     );
   }

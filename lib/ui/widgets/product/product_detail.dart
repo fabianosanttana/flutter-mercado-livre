@@ -216,7 +216,10 @@ class ProductDetailLayout extends StatelessWidget {
                 style: CustomThemes.productDetailTitle
                     .copyWith(color: Colors.blue, fontSize: 18)),
           ),
-        )
+        ),
+        SizedBox(
+          height: 80
+        ),
       ],
     );
   }
